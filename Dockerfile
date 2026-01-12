@@ -13,7 +13,7 @@ RUN npm install --registry https://registry.npmmirror.com
 COPY . .
 
 # 构建项目
-RUN npm run build
+RUN npm run build:test
  
 # 生产环境使用 Nginx
 FROM nginx:alpine
