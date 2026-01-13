@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --registry=https://registry.npmmirror.com # 可使用国内镜像加速
 COPY . .
-RUN npm run build
+RUN npm run build:test
 
 # 第二阶段：构建最终镜像
 FROM nginx:alpine
