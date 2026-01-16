@@ -36,6 +36,7 @@ RUN apk add --no-cache tzdata && \
 COPY --from=builder /app/dist /usr/share/nginx/html
 # 用我们自定义的nginx配置替换默认配置
 COPY nginx.conf /etc/nginx/nginx.conf
+
 # 暴露端口
 EXPOSE 80
 # 以非守护进程方式启动Nginx (对容器运行至关重要)
