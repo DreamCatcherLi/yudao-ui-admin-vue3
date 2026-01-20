@@ -133,7 +133,7 @@ const loginData = reactive({
   },
   loginForm: {
     uuid: '',
-    tenantName: '芋道源码',
+    tenantName: '艾伦集团',
     mobileNumber: '',
     code: ''
   }
