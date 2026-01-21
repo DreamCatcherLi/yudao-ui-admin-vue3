@@ -68,7 +68,7 @@ const toDocument = () => {
           <Icon icon="ep:tools" />
           <div @click="toProfile">{{ t('common.profile') }}</div>
         </ElDropdownItem>
-        <ElDropdownItem>
+        <ElDropdownItem v-if="false">
           <Icon icon="ep:menu" />
           <div @click="toDocument">{{ t('common.document') }}</div>
         </ElDropdownItem>
