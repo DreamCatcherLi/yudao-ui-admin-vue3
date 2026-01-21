@@ -1,6 +1,6 @@
 # frontend/Dockerfile
 # 第一阶段：构建Vue应用
-FROM node:20-alpine AS builder
+FROM registry.cn-beijing.aliyuncs.com/liam_test/node:20-alpine AS builder
 
 # 设置工作目录
 WORKDIR /app
@@ -25,7 +25,7 @@ ARG env=prod
 RUN pnpm run build:${env}
 
 # 第二阶段：构建最终镜像
-FROM nginx:alpine
+FROM registry.cn-beijing.aliyuncs.com/liam_test/nginx:alpine
 
 # 设置时区
 RUN apk add --no-cache tzdata && \
